@@ -26,5 +26,5 @@ public class smsLog {
     private String province;
     private String ipAdrr;
     private Integer replyTotal;
-    private Integer fee;
+    private Long fee;
 }

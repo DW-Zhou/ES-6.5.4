@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c47541e7-0be0-4291-8b78-061aa0d8d661" name="Default Changelist" comment="" />
+    <list default="true" id="c47541e7-0be0-4291-8b78-061aa0d8d661" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ElaticSearch/基本操作.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dengzhou/beans/smsLog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dengzhou/beans/smsLog.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dengzhou/sms/create_sms_index.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dengzhou/sms/create_sms_index.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/dengzhou/sms/create_sms_index.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/dengzhou/sms/create_sms_index.class" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,6 +25,9 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
@@ -33,7 +43,9 @@
     </option>
   </component>
   <component name="ProjectId" id="1enCUx9sXc6GV2HibXiwA6gAD7N" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
@@ -50,39 +62,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.create_sms_index">
-    <configuration name="Create_ES_Index.createDoc" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="ES" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.dengzhou.test.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.dengzhou.test" />
-      <option name="MAIN_CLASS_NAME" value="com.dengzhou.test.Create_ES_Index" />
-      <option name="METHOD_NAME" value="createDoc" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Create_ES_Index.exists" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="ES" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.dengzhou.test.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.dengzhou.test" />
-      <option name="MAIN_CLASS_NAME" value="com.dengzhou.test.Create_ES_Index" />
-      <option name="METHOD_NAME" value="exists" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="JUnit.create_sms_index.testQuery">
     <configuration name="Create_ES_Index.updateDoc" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ES" />
       <extension name="coverage">
@@ -130,13 +110,45 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="create_sms_index.exists" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ES" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.dengzhou.sms.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.dengzhou.sms" />
+      <option name="MAIN_CLASS_NAME" value="com.dengzhou.sms.create_sms_index" />
+      <option name="METHOD_NAME" value="exists" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="create_sms_index.testQuery" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ES" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.dengzhou.sms.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.dengzhou.sms" />
+      <option name="MAIN_CLASS_NAME" value="com.dengzhou.sms.create_sms_index" />
+      <option name="METHOD_NAME" value="testQuery" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.create_sms_index.testQuery" />
         <item itemvalue="JUnit.create_sms_index" />
         <item itemvalue="JUnit.create_sms_index.create_index" />
+        <item itemvalue="JUnit.create_sms_index.exists" />
         <item itemvalue="JUnit.Create_ES_Index.updateDoc" />
-        <item itemvalue="JUnit.Create_ES_Index.createDoc" />
-        <item itemvalue="JUnit.Create_ES_Index.exists" />
       </list>
     </recent_temporary>
   </component>
@@ -153,11 +165,22 @@
       <workItem from="1594947990499" duration="2967000" />
       <workItem from="1594951131240" duration="36000" />
       <workItem from="1594964151469" duration="2036000" />
-      <workItem from="1595398415939" duration="9329000" />
+      <workItem from="1595398415939" duration="12900000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

@@ -376,9 +376,140 @@ public class Create_ES_Index {
   - 创建实例代码
 
     ~~~java
+     public void create_index() throws IOException {
+            Settings.Builder settings = Settings.builder()
+                    .put("number_of_shards", 3)
+                    .put("number_of_replicas", 1);
+    
+            XContentBuilder mappings = JsonXContent.contentBuilder()
+                    .startObject()
+                        .startObject("properties")
+                            .startObject("createDate")
+                                .field("type", "text")
+                            .endObject()
+                            .startObject("sendDate")
+                                .field("type", "date")
+                                .field("format", "yyyy-MM-dd")
+                            .endObject()
+                            .startObject("longCode")
+                                .field("type", "text")
+                            .endObject()
+                            .startObject("mobile")
+                                .field("type", "text")
+                            .endObject()
+                            .startObject("corpName")
+                                .field("type", "text")
+                                .field("analyzer", "ik_max_word")
+                            .endObject()
+                            .startObject("smsContent")
+                                .field("type", "text")
+                                .field("analyzer", "ik_max_word")
+                            .endObject()
+                            .startObject("state")
+                                .field("type", "integer")
+                            .endObject()
+                            .startObject("operatorid")
+                                .field("type", "integer")
+                            .endObject()
+                            .startObject("province")
+                                .field("type", "text")
+                            .endObject()
+                            .startObject("ipAddr")
+                                .field("type", "text")
+                            .endObject()
+                            .startObject("replyTotal")
+                                .field("type", "integer")
+                            .endObject()
+                            .startObject("fee")
+                                .field("type", "integer")
+                            .endObject()
+                        .endObject()
+                    .endObject();
+    
+            CreateIndexRequest request = new CreateIndexRequest(index)
+                    .settings(settings)
+                    .mapping(type,mappings);
+    
+            RestHighLevelClient client = ESClient.getClient();
+            CreateIndexResponse response = client.indices().create(request, RequestOptions.DEFAULT);
+            System.out.println(response.toString());
+        }
     
     ~~~
 
-    
+    - <u>数据导入部分</u>
+
+      ~~~json
+      PUT /sms_logs_index/sms_logs_type/1
+      {
+        "corpName": "途虎养车",
+        "createDate": "2020-1-22",
+        "fee": 3,
+        "ipAddr": "10.123.98.0",
+        "longCode": 106900000009,
+        "mobile": "1738989222222",
+        "operatorid": 1,
+        "province": "河北",
+        "relyTotal": 10,
+        "sendDate": "2020-2-22",
+        "smsContext":   "【途虎养车】亲爱的灯先生，您的爱车已经购买",
+        "state": 0
+      }
+      ~~~
+
+      
+
+  ## 4 . ElasticSearch的各种查询
+
+  ### 4.1 term&terms查询
+
+  #### 4.1.1 term查询
+
+  - ​	<u>term的查询是代表完全匹配，搜索之前不会对你的关键字进行分词</u>
+
+  ~~~json
+  #term匹配查询
+  POST /sms_logs_index/sms_logs_type/_search
+  {
+    "from": 0,   #limit  from,size
+    "size": 5,
+    "query": {
+      "term": {
+        "province": {
+          "value": "河北"
+        }
+      }
+    }
+  }
+  ##不会对term中所匹配的值进行分词查询
+  ~~~
 
   
+
+  ~~~java
+  // java代码实现方式
+      @Test
+      public void testQuery() throws IOException {
+  //        1 创建Request对象
+          SearchRequest request = new SearchRequest(index);
+          request.types(type);
+  //        2 指定查询条件
+          SearchSourceBuilder builder = new SearchSourceBuilder();
+          builder.from(0);
+          builder.size(5);
+          builder.query(QueryBuilders.termQuery("province", "河北"));
+  
+          request.source(builder);
+  //        3 执行查询
+          RestHighLevelClient client = ESClient.getClient();
+          SearchResponse response = client.search(request, RequestOptions.DEFAULT);
+  //        4  获取到_source中的数据
+          for (SearchHit hit : response.getHits().getHits()) {
+              Map<String, Object> result = hit.getSourceAsMap();
+              System.out.println(result);
+          }
+      }
+  ~~~
+
+  
+
