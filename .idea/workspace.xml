@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="c47541e7-0be0-4291-8b78-061aa0d8d661" name="Default Changelist" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="ES" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="localRepository" value="$USER_HOME$/Documents/Software/apache-maven-3.6.3/repository" />
+        <option name="mavenHome" value="$USER_HOME$/Documents/Software/apache-maven-3.6.3" />
+        <option name="userSettingsFile" value="$USER_HOME$/Documents/Software/apache-maven-3.6.3/conf/settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1enCUx9sXc6GV2HibXiwA6gAD7N" />
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="JUnit.create_sms_index">
+    <configuration name="Create_ES_Index.createDoc" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ES" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.dengzhou.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.dengzhou.test" />
+      <option name="MAIN_CLASS_NAME" value="com.dengzhou.test.Create_ES_Index" />
+      <option name="METHOD_NAME" value="createDoc" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Create_ES_Index.exists" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ES" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.dengzhou.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.dengzhou.test" />
+      <option name="MAIN_CLASS_NAME" value="com.dengzhou.test.Create_ES_Index" />
+      <option name="METHOD_NAME" value="exists" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Create_ES_Index.updateDoc" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ES" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.dengzhou.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.dengzhou.test" />
+      <option name="MAIN_CLASS_NAME" value="com.dengzhou.test.Create_ES_Index" />
+      <option name="METHOD_NAME" value="updateDoc" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="create_sms_index" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ES" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.dengzhou.sms.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.dengzhou.sms" />
+      <option name="MAIN_CLASS_NAME" value="com.dengzhou.sms.create_sms_index" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="create_sms_index.create_index" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ES" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.dengzhou.sms.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.dengzhou.sms" />
+      <option name="MAIN_CLASS_NAME" value="com.dengzhou.sms.create_sms_index" />
+      <option name="METHOD_NAME" value="create_index" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.create_sms_index" />
+        <item itemvalue="JUnit.create_sms_index.create_index" />
+        <item itemvalue="JUnit.Create_ES_Index.updateDoc" />
+        <item itemvalue="JUnit.Create_ES_Index.createDoc" />
+        <item itemvalue="JUnit.Create_ES_Index.exists" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c47541e7-0be0-4291-8b78-061aa0d8d661" name="Default Changelist" comment="" />
+      <created>1594947988284</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1594947988284</updated>
+      <workItem from="1594947990499" duration="2967000" />
+      <workItem from="1594951131240" duration="36000" />
+      <workItem from="1594964151469" duration="2036000" />
+      <workItem from="1595398415939" duration="9329000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+</project>
