@@ -11,12 +11,12 @@ import org.elasticsearch.client.RestHighLevelClient;
 import org.elasticsearch.common.settings.Settings;
 import org.elasticsearch.common.xcontent.XContentBuilder;
 import org.elasticsearch.common.xcontent.json.JsonXContent;
+import org.elasticsearch.index.query.Operator;
 import org.elasticsearch.index.query.QueryBuilders;
 import org.elasticsearch.search.SearchHit;
 import org.elasticsearch.search.builder.SearchSourceBuilder;
 import org.junit.jupiter.api.Test;
 
-import javax.naming.directory.SearchResult;
 import java.io.IOException;
 import java.util.Map;
 
@@ -113,6 +113,87 @@ public class create_sms_index {
         for (SearchHit hit : response.getHits().getHits()) {
             Map<String, Object> result = hit.getSourceAsMap();
             System.out.println(result);
+        }
+    }
+
+    @Test
+    public void test_terms() throws IOException {
+        SearchRequest request = new SearchRequest(index);
+        request.types(type);
+
+        SearchSourceBuilder builder = new SearchSourceBuilder();
+        builder.query(QueryBuilders.termsQuery("province","河北","河南"));
+
+        request.source(builder);
+
+        RestHighLevelClient client = ESClient.getClient();
+        SearchResponse resp = client.search(request, RequestOptions.DEFAULT);
+
+        for (SearchHit hit : resp.getHits().getHits()){
+            System.out.println(hit);
+        }
+    }
+
+    @Test
+    public void test_match_all() throws IOException {
+        SearchRequest request = new SearchRequest(index);
+        request.types(type);
+        SearchSourceBuilder builder = new SearchSourceBuilder();
+        builder.query(QueryBuilders.matchAllQuery());
+        request.source(builder);
+        RestHighLevelClient client = ESClient.getClient();
+        SearchResponse response = client.search(request, RequestOptions.DEFAULT);
+
+        for (SearchHit hit : response.getHits().getHits()){
+            System.out.println(hit);
+        }
+
+    }
+    @Test
+    public void test_match_field() throws IOException {
+        SearchRequest request = new SearchRequest(index);
+        request.types(type);
+        SearchSourceBuilder builder = new SearchSourceBuilder();
+        builder.query(QueryBuilders.matchQuery("smsContext","打车"));
+        request.source(builder);
+        RestHighLevelClient client = ESClient.getClient();
+        SearchResponse response = client.search(request, RequestOptions.DEFAULT);
+
+        for (SearchHit hit : response.getHits().getHits()){
+            System.out.println(hit);
+        }
+
+    }
+
+    @Test
+    public void test_match_boolean() throws IOException {
+        SearchRequest request = new SearchRequest(index);
+        request.types(type);
+        SearchSourceBuilder builder = new SearchSourceBuilder();
+        builder.query(QueryBuilders.matchQuery("smsContext","打车 女士").operator(Operator.AND));
+        request.source(builder);
+        RestHighLevelClient client = ESClient.getClient();
+        SearchResponse response = client.search(request, RequestOptions.DEFAULT);
+
+        for (SearchHit hit : response.getHits().getHits()){
+            System.out.println(hit);
+        }
+
+    }
+
+    @Test
+    public void test_multi_match() throws IOException {
+        SearchRequest request = new SearchRequest(index);
+        request.types(type);
+        SearchSourceBuilder builder = new SearchSourceBuilder();
+        //builder.query(QueryBuilders.matchQuery("smsContext","打车 女士").operator(Operator.AND));
+        builder.query(QueryBuilders.multiMatchQuery("河北", "province", "smsContext"));
+        request.source(builder);
+        RestHighLevelClient client = ESClient.getClient();
+        SearchResponse response = client.search(request, RequestOptions.DEFAULT);
+
+        for (SearchHit hit : response.getHits().getHits()) {
+            System.out.println(hit);
         }
     }
 }

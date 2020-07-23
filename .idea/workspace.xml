@@ -2,12 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c47541e7-0be0-4291-8b78-061aa0d8d661" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ElaticSearch/基本操作.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/dengzhou/beans/smsLog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dengzhou/beans/smsLog.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ElasticSearch知识点.md" beforeDir="false" afterPath="$PROJECT_DIR$/ElasticSearch知识点.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/dengzhou/sms/create_sms_index.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dengzhou/sms/create_sms_index.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/dengzhou/sms/create_sms_index.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/dengzhou/sms/create_sms_index.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -62,24 +59,24 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.create_sms_index.testQuery">
-    <configuration name="Create_ES_Index.updateDoc" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.test_sms_search2.test_query_fuzzy">
+    <configuration name="test_sms_search2.test_query_fuzzy" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ES" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.dengzhou.test.*" />
+          <option name="PATTERN" value="com.dengzhou.sms.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.dengzhou.test" />
-      <option name="MAIN_CLASS_NAME" value="com.dengzhou.test.Create_ES_Index" />
-      <option name="METHOD_NAME" value="updateDoc" />
+      <option name="PACKAGE_NAME" value="com.dengzhou.sms" />
+      <option name="MAIN_CLASS_NAME" value="com.dengzhou.sms.test_sms_search2" />
+      <option name="METHOD_NAME" value="test_query_fuzzy" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="create_sms_index" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="test_sms_search.test_query_range" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ES" />
       <extension name="coverage">
         <pattern>
@@ -88,29 +85,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.dengzhou.sms" />
-      <option name="MAIN_CLASS_NAME" value="com.dengzhou.sms.create_sms_index" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="create_sms_index.create_index" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="ES" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.dengzhou.sms.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.dengzhou.sms" />
-      <option name="MAIN_CLASS_NAME" value="com.dengzhou.sms.create_sms_index" />
-      <option name="METHOD_NAME" value="create_index" />
+      <option name="MAIN_CLASS_NAME" value="com.dengzhou.sms.test_sms_search" />
+      <option name="METHOD_NAME" value="test_query_range" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="create_sms_index.exists" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="test_sms_search.test_query_regexp" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ES" />
       <extension name="coverage">
         <pattern>
@@ -119,14 +101,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.dengzhou.sms" />
-      <option name="MAIN_CLASS_NAME" value="com.dengzhou.sms.create_sms_index" />
-      <option name="METHOD_NAME" value="exists" />
+      <option name="MAIN_CLASS_NAME" value="com.dengzhou.sms.test_sms_search" />
+      <option name="METHOD_NAME" value="test_query_regexp" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="create_sms_index.testQuery" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="test_sms_search.test_query_scroll" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ES" />
       <extension name="coverage">
         <pattern>
@@ -135,8 +117,24 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.dengzhou.sms" />
-      <option name="MAIN_CLASS_NAME" value="com.dengzhou.sms.create_sms_index" />
-      <option name="METHOD_NAME" value="testQuery" />
+      <option name="MAIN_CLASS_NAME" value="com.dengzhou.sms.test_sms_search" />
+      <option name="METHOD_NAME" value="test_query_scroll" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="test_sms_search.test_query_wildcard" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ES" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.dengzhou.sms.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.dengzhou.sms" />
+      <option name="MAIN_CLASS_NAME" value="com.dengzhou.sms.test_sms_search" />
+      <option name="METHOD_NAME" value="test_query_wildcard" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -144,11 +142,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.create_sms_index.testQuery" />
-        <item itemvalue="JUnit.create_sms_index" />
-        <item itemvalue="JUnit.create_sms_index.create_index" />
-        <item itemvalue="JUnit.create_sms_index.exists" />
-        <item itemvalue="JUnit.Create_ES_Index.updateDoc" />
+        <item itemvalue="JUnit.test_sms_search2.test_query_fuzzy" />
+        <item itemvalue="JUnit.test_sms_search.test_query_scroll" />
+        <item itemvalue="JUnit.test_sms_search.test_query_regexp" />
+        <item itemvalue="JUnit.test_sms_search.test_query_range" />
+        <item itemvalue="JUnit.test_sms_search.test_query_wildcard" />
       </list>
     </recent_temporary>
   </component>
@@ -165,7 +163,8 @@
       <workItem from="1594947990499" duration="2967000" />
       <workItem from="1594951131240" duration="36000" />
       <workItem from="1594964151469" duration="2036000" />
-      <workItem from="1595398415939" duration="12900000" />
+      <workItem from="1595398415939" duration="13636000" />
+      <workItem from="1595467806090" duration="9296000" />
     </task>
     <servers />
   </component>
@@ -177,7 +176,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
